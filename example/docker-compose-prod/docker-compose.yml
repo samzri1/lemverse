@@ -30,7 +30,7 @@ services:
         {
           "public": {
             "lp": {
-              "website": "https://app.lemverse.com",
+              "website": "http://lmverse.eastus.cloudapp.azure.com",
               "product": "lemverse",
               "process": "main",
               "gods": [""],
@@ -49,7 +49,7 @@ services:
               "delayBeforeClosingCall": 1000
             },
             "meet": {
-              "serverURL": "jitsi.YOURDOMAIN.COM",
+              "serverURL": "jitsi.lmverse.eastus.cloudapp.azure.com",
               "roomDefaultName": "lemverse-test"
             },
             "character": {
@@ -169,7 +169,7 @@ services:
           "peer": {
             "path": "/peer",
             "client": {
-              "url": "peer.YOURDOMAIN.COM",
+              "url": "peer.lmverse.eastus.cloudapp.azure.com",
               "port": 443,
               "credentialDuration": 86400,
               "secret": "",
@@ -203,9 +203,9 @@ services:
     restart: unless-stopped
     container_name: caddy
     environment:
-      FRONTEND_HOST: app.YOURDOMAIN.COM
-      JITSI_HOST: jitsi.YOURDOMAIN.COM
-      PEER_HOST: peer.YOURDOMAIN.COM
+      FRONTEND_HOST: app.lmverse.eastus.cloudapp.azure.com
+      JITSI_HOST: jitsi.lmverse.eastus.cloudapp.azure.com
+      PEER_HOST: peer.lmverse.eastus.cloudapp.azure.com
       JITSI_SERVICE: jitsi
       FRONTEND_SERVICE: lemverse
       PEER_SERVICE: peer
